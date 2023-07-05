@@ -14,3 +14,8 @@ number += 1; // number = number + 1
 number -= 1; // number = number - 1
 number /= 1;
 number *= 1;
+
+let number2 = 10;
+
+console.log(++number2);
+console.log(number2);
