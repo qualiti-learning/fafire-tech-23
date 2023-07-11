@@ -59,6 +59,9 @@ const usersSortByName = [...users].sort((userA, userB) =>
   userA.name.localeCompare(userB.name)
 );
 
+const sum = (...values) =>
+  values.reduce((prevValue, currValue) => prevValue + currValue);
+
 console.log({
   allUsersBelongsToFafire,
   fafireUsers,
@@ -68,3 +71,5 @@ console.log({
   users,
   usersSortByName,
 });
+
+console.log('SUM', sum(1, 2, 3, 4, 5, 6));
