@@ -1,9 +1,13 @@
 import ReactDOM from 'react-dom/client';
-import App from './App.jsx';
 import { ChakraProvider } from '@chakra-ui/react';
+import Home from './pages/Home';
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <ChakraProvider>
-    <App />
+    <Navbar />
+    <Home />
+    <Footer />
   </ChakraProvider>
 );
