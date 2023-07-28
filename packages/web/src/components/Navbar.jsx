@@ -3,7 +3,6 @@ import {
   Flex,
   Text,
   IconButton,
-  Button,
   Stack,
   Collapse,
   Icon,
@@ -14,6 +13,7 @@ import {
   useDisclosure,
   Container,
 } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 import { HamburgerIcon, CloseIcon, ChevronDownIcon } from '@chakra-ui/icons';
 
 const Navbar = () => {
@@ -85,9 +85,9 @@ const DesktopNav = () => {
           <Popover trigger={'hover'} placement={'bottom-start'}>
             <PopoverTrigger>
               <Box
-                as='a'
+                as={Link}
                 p={2}
-                href={navItem.href ?? '#'}
+                to={navItem.href ?? '#'}
                 fontSize={'sm'}
                 fontWeight={500}
                 color={linkColor}
@@ -181,6 +181,10 @@ const NAV_ITEMS = [
   {
     label: 'Dashboard',
     href: '/dashboard',
+  },
+  {
+    label: 'Contact',
+    href: '/contact',
   },
 ];
 

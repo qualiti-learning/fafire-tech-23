@@ -4,6 +4,7 @@ const cors = require('cors');
 const helmet = require('helmet');
 
 const shortnerRouter = require('./routes/ShortnerRouter');
+const contactRouter = require('./routes/ContactRouter');
 
 const app = express();
 
@@ -12,6 +13,7 @@ app.use(cors());
 
 app.use(morgan('dev'));
 app.use(express.json());
+app.use(contactRouter);
 app.use(shortnerRouter);
 app.get('/', (request, response) => response.send({ message: 'Hello World' }));
 
